@@ -747,7 +747,7 @@ section .headline {
 
 @media (max-width: 768px) {
   #services img {
-    margin: 0 auto 3rem auto;
+    padding:2rem 0 2rem 0;
   }
 
   #services .text-center {
