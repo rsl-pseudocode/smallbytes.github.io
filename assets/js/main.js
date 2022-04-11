@@ -19,8 +19,8 @@ jQuery(window).on("load", function () {
 jQuery(document).ready(function ($) {
   "use strict";
 
-  $(".navigation-main .navigation-items").onePageNav({
-    currentClass: "current",
+  $(".navbar .navbar-nav").onePageNav({
+    currentClass: "active",
     changeHash: false,
     scrollSpeed: 750,
     scrollThreshold: 0.5,
