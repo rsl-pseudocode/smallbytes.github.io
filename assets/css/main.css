@@ -326,6 +326,10 @@ a:hover {
     height: 60px;
   }
 
+  p{
+    font-size: 2rem;
+  }
+
   .navbar-header {
     float: none;
 
@@ -743,6 +747,10 @@ section .headline {
   text-align: left;
   padding-right: 1rem;
   padding-left: 2.5rem;
+}
+
+#services img {
+  padding:2rem 0 2rem 0;
 }
 
 @media (max-width: 768px) {
