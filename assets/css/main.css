@@ -210,9 +210,9 @@ a:hover {
 /** Navigation
 *******************************************************************/
 
-@media (min-width: 800px) {
+@media (min-width: 975px) {
   .navbar-expand-lg .navbar-nav {
-    padding-left: 450px;
+    padding-left: 20%;
   }
 
   .navbar-expand-lg .navbar-nav .nav-link {
@@ -226,12 +226,25 @@ a:hover {
     text-transform: uppercase;
   }
 
+  .navbar-brand {
+    height: 45px;
+    padding-left: 30px;
+  }
+
 }
+@media (max-width: 992px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
   color: #E18A07;
 }
+
+
 
 /** MEDIA QUERIES  **/
 
