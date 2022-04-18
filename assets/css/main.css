@@ -278,7 +278,7 @@ section {
   margin: 0 auto;
   padding: 16rem 0;
 
-  background: rgba(45, 45, 45, 0.86);
+  background: rgba(45, 45, 45, 0.6);
 }
 
 .section-container {
@@ -567,11 +567,15 @@ section .headline {
 
 #services img {
   padding:2rem 0 2rem 0;
+  height: 90px;
+  width: 50px;
 }
 
 @media (max-width: 768px) {
   #services img {
     padding:2rem 0 2rem 0;
+    height: 75px;
+    width: 50px;
   }
 
   #services .text-center {
