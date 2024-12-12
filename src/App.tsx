@@ -77,10 +77,11 @@ function App() {
                 textAlign: "left",
               }}
             >
-              With over 10 years as a developer I still enjoy learning new things
-              every day. I enjoy creating effective, efficient and reliable
-              solutions. Experienced in both front-end and back-end development,
-              with a main focus on technologies like .Net, Blazor and React.
+              With over 10 years as a developer I still truly enjoy learning new
+              things every day. I like to create effective, reliable and
+              efficient applications. I'm experienced in both front-end and
+              back-end development, with my main focus on technologies like
+              .Net, Blazor and React.
             </Typography>
           </Grid>
           <Grid item xs={11} sm={6}>
