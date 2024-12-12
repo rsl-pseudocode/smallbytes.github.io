@@ -77,7 +77,7 @@ function App() {
                 textAlign: "left",
               }}
             >
-              With over 9 years as a developer I still enjoy learning new things
+              With over 10 years as a developer I still enjoy learning new things
               every day. I enjoy creating effective, efficient and reliable
               solutions. Experienced in both front-end and back-end development,
               with a main focus on technologies like .Net, Blazor and React.
