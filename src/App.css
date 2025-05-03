@@ -3,13 +3,68 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 
 a {
   text-decoration: none;
   color: #cf8e00;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 a:hover {
-  color: #b27900;
+  color: #ffb224;
+  text-shadow: 0 0 8px rgba(207, 142, 0, 0.5);
+}
+
+a:hover:after {
+  transform: scaleX(1);
+}
+
+a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #ffb224;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+
+.gradient-text {
+  background: linear-gradient(90deg, #cf8e00, #ffb224);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.profile-container {
+  position: relative;
+  z-index: 1;
+}
+
+.profile-container::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  top: -25%;
+  left: -25%;
+  background: radial-gradient(circle, rgba(207, 142, 0, 0.15) 0%, rgba(33, 33, 33, 0) 70%);
+  z-index: -1;
+}
+
+.skill-icon {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skill-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(207, 142, 0, 0.6));
 }

@@ -1,40 +1,121 @@
 import "./App.css";
-import { Container, Grid, IconButton, Typography } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {
+  Container,
+  Grid,
+  IconButton,
+  Typography,
+  Box,
+  Divider,
+  Button,
+} from "@mui/material";
+import {
+  createTheme,
+  ThemeProvider,
+  responsiveFontSizes,
+} from "@mui/material/styles";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import LaunchIcon from "@mui/icons-material/Launch";
 import ImageComponent from "./components/ImageComponent";
 import SkillComponent from "./components/SkillComponent";
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       light: "#171717",
-      main: "#212121",
-      dark: "#252c21",
+      main: "#161616",
+      dark: "#121212",
       contrastText: "#fff",
     },
     secondary: {
-      light: "#697070",
-      main: "#162121",
-      dark: "#0f1717",
-      contrastText: "#000",
+      light: "#a0a0a0",
+      main: "#cf8e00",
+      dark: "#b27900",
+      contrastText: "#fff",
+    },
+  },
+  typography: {
+    fontFamily: "'Montserrat', sans-serif",
+    h1: {
+      fontFamily: "'Raleway', sans-serif",
+      fontWeight: 700,
+    },
+    h2: {
+      fontFamily: "'Raleway', sans-serif",
+      fontWeight: 600,
+    },
+    h3: {
+      fontFamily: "'Raleway', sans-serif",
+      fontWeight: 600,
+    },
+    h4: {
+      fontFamily: "'Raleway', sans-serif",
+      fontWeight: 600,
+    },
+    h5: {
+      fontFamily: "'Raleway', sans-serif",
+      fontWeight: 600,
+    },
+    h6: {
+      fontFamily: "'Raleway', sans-serif",
+      fontWeight: 600,
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          textTransform: "none",
+          fontWeight: 600,
+          transition: "all 0.3s ease",
+          "&:hover": {
+            transform: "translateY(-2px)",
+            boxShadow: "0 4px 8px rgba(0,0,0,0.2)",
+          },
+        },
+      },
+    },
+    MuiIconButton: {
+      styleOverrides: {
+        root: {
+          transition: "all 0.3s ease",
+          "&:hover": {
+            transform: "scale(1.15)",
+          },
+        },
+      },
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <Container>
         <header>
-          <div style={{ position: "fixed", top: 0, right: 0 }}>
+          <Box
+            sx={{
+              position: "fixed",
+              top: 0,
+              right: 0,
+              zIndex: 10,
+              background: "rgba(22, 22, 22, 0.7)",
+              backdropFilter: "blur(1px)",
+              borderBottomLeftRadius: "12px",
+              padding: "8px 0",
+              boxShadow: "0 4px 20px rgba(0, 0, 0, 0.2)",
+            }}
+          >
             <Grid container justifyContent="flex-end" spacing={1}>
               <Grid item>
                 <IconButton
                   aria-label="Connect with Robert on LinkedIn"
                   href="https://www.linkedin.com/in/robert-sorman-lundgren/"
-                  sx={{ color: theme.palette.secondary.light }}
+                  sx={{ color: "#0077b5" }}
+                  className="pulse"
                 >
                   <LinkedInIcon />
                 </IconButton>
@@ -43,142 +124,263 @@ function App() {
                 <IconButton
                   aria-label="Email Small Bytes"
                   href="mailto:hello@smallbytes.se"
-                  sx={{ color: theme.palette.secondary.light, paddingRight: 4 }}
+                  sx={{ color: "#cf8e00", paddingRight: 2 }}
+                  className="pulse"
                 >
                   <EmailIcon />
                 </IconButton>
               </Grid>
             </Grid>
-          </div>
+          </Box>
         </header>
+
         <main>
           <Grid
             container
             component="section"
             justifyContent="center"
-            spacing={2}
+            spacing={3}
+            id="intro"
+            sx={{
+              pt: 4,
+
+              scrollMarginTop: "2rem",
+            }}
           >
-            <Grid item>
-              <ImageComponent imageUrl="./IMG_profile.jpg" />
+            <Grid item xs={12} display="flex" justifyContent="center">
+              <Box className="profile-container" sx={{ mb: 3, mt: 3 }}>
+                <ImageComponent imageUrl="./IMG_profile.jpg" />
+              </Box>
             </Grid>
-            <Grid item xs={12}>
+
+            <Grid item xs={12} sx={{ textAlign: "center" }}>
               <Typography
                 variant="h1"
+                className="gradient-text"
                 sx={{
-                  color: theme.palette.primary.contrastText,
-                  fontSize: "2.5rem",
+                  fontSize: { xs: "2.2rem", sm: "2.8rem" },
                   mb: 1,
+                  fontWeight: "bold",
                 }}
               >
                 Hi, I'm Robert
               </Typography>
-            </Grid>
-            <Grid item xs={12}>
+
               <Typography
                 variant="h2"
                 sx={{
                   color: theme.palette.primary.contrastText,
-                  fontSize: "1.75rem",
+                  fontSize: { xs: "1.5rem", sm: "1.75rem" },
                 }}
               >
                 A freelance full stack engineer based in Sweden
               </Typography>
             </Grid>
-            <Grid item xs={12} sm={7}>
-              <Typography
-                variant="body1"
+
+            <Grid item xs={12} sm={8} md={7} sx={{ textAlign: "center" }}>
+              <Box
                 sx={{
-                  color: theme.palette.secondary.light,
-                  textAlign: "left",
+                  p: 1,
                 }}
               >
-                With over 11 years as a developer I still truly enjoy learning
-                new things every day. I like to create effective, reliable and
-                efficient applications. I'm experienced in both front-end and
-                back-end development, with my main focus on technologies like
-                .Net, Blazor and React.
-              </Typography>
-            </Grid>
-            <Grid item xs={11} sm={6}>
-              <Typography
-                variant="body1"
-                sx={{ color: theme.palette.secondary.light }}
-              >
-                <strong>
-                  <a href="mailto:hello@smallbytes.se">Reach out </a>
-                </strong>
-                if you got a new thing going or need an extra hand.
-              </Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography
-                variant="body2"
-                sx={{ color: theme.palette.secondary.light }}
-              >
-                Collaboration is key.
-              </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: "#a0a0a0",
+                    fontSize: "1.05rem",
+                    mb: 2,
+                    lineHeight: 1.6,
+                  }}
+                >
+                  With over 11 years as a developer I still truly enjoy learning
+                  new things every day. I like to create effective, reliable and
+                  efficient applications. <br /> I'm experienced in both
+                  front-end and back-end development, with my main focus on
+                  technologies like .Net, Blazor and React.
+                </Typography>
+
+                <Divider
+                  sx={{ my: 2, backgroundColor: "rgba(207, 142, 0, 0.3)" }}
+                />
+
+                <Box sx={{ display: "flex", justifyContent: "center", mt: 2 }}>
+                  <Button
+                    variant="contained"
+                    startIcon={<EmailIcon />}
+                    href="mailto:hello@smallbytes.se"
+                    sx={{
+                      backgroundColor: "#cf8e00",
+                      color: "#ffffff",
+                      fontWeight: "bold",
+                      "&:hover": {
+                        backgroundColor: "#ffb224",
+                        color: "#ffffff",
+                      },
+                    }}
+                  >
+                    Contact Me
+                  </Button>
+                </Box>
+
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: theme.palette.secondary.light,
+                    mt: 2,
+                    fontStyle: "italic",
+                  }}
+                >
+                  Collaboration is key.
+                </Typography>
+              </Box>
             </Grid>
 
-            <Grid item xs={12} sx={{ marginTop: 6 }}>
+            <Grid item xs={12} sx={{ marginTop: 2 }} id="projects">
               <Typography
                 variant="h3"
+                className="gradient-text"
                 sx={{
-                  color: theme.palette.primary.contrastText,
                   fontSize: "1.75rem",
+                  fontWeight: "bold",
+                  textAlign: "center",
+                  mb: 1,
+                  paddingTop: "1rem",
+                  position: "relative",
+                  display: "inline-block",
+                  width: "100%",
                 }}
               >
                 My Products
+                <Box
+                  sx={{
+                    position: "absolute",
+                    height: "3px",
+                    width: "80px",
+                    background: "linear-gradient(90deg, #cf8e00, transparent)",
+                    bottom: "-10px",
+                    left: "calc(50% - 40px)",
+                    borderRadius: "2px",
+                  }}
+                />
               </Typography>
             </Grid>
 
-            <Grid item xs={12} sm={6} md={4} sx={{ marginTop: 2 }}>
-              <Typography
-                variant="h5"
-                sx={{ color: theme.palette.primary.contrastText }}
-              >
-                <a
-                  href="https://www.runiverse.se"
-                  rel="noopener noreferrer"
-                  aria-label="Runivers - Swedish running community"
-                  title="Find your next race at Runivers.se"
+            <Grid container spacing={3} sx={{ mt: 3, mb: 4 }}>
+              <Grid item xs={12} sm={6}>
+                <Box
+                  sx={{
+                    p: 2,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
                 >
-                  Runivers.se
-                </a>
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: theme.palette.secondary.light }}
-              >
-                A platform for Swedish runners to find their next race and read
-                about other runners' experiences. Features running events, race
-                reviews, it aim's to be a community for running enthusiasts in
-                Sweden.
-              </Typography>
-            </Grid>
+                  <Typography
+                    variant="h5"
+                    className="gradient-text"
+                    sx={{
+                      mb: 2,
+                      fontWeight: "bold",
+                      color: theme.palette.primary.contrastText,
+                    }}
+                  >
+                    Runivers.se
+                  </Typography>
 
-            <Grid item xs={12} sm={6} md={4} sx={{ marginTop: 2 }}>
-              <Typography
-                variant="h5"
-                sx={{ color: theme.palette.primary.contrastText }}
-              >
-                <a
-                  href="https://glommig.se"
-                  rel="noopener noreferrer"
-                  aria-label="Glöm Mig - GDPR right to be forgotten service"
-                  title="Exercise your right to be forgotten with Glommig.se"
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "#a0a0a0",
+                      mb: 3,
+                      flexGrow: 1,
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    A platform for Swedish runners to find their next race and
+                    read about other runners' experiences. Features running
+                    events, race reviews, it aim's to be a community for running
+                    enthusiasts in Sweden.
+                  </Typography>
+
+                  <Button
+                    variant="outlined"
+                    endIcon={<LaunchIcon />}
+                    href="https://www.runiverse.se"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      alignSelf: "flex-start",
+                      borderColor: "#cf8e00",
+                      color: "#cf8e00",
+                      "&:hover": {
+                        borderColor: "#ffb224",
+                        color: "#ffb224",
+                        backgroundColor: "rgba(207, 142, 0, 0.08)",
+                      },
+                    }}
+                  >
+                    Visit Website
+                  </Button>
+                </Box>
+              </Grid>
+
+              <Grid item xs={12} sm={6}>
+                <Box
+                  sx={{
+                    p: 2,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
                 >
-                  Glommig.se
-                </a>
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{ color: theme.palette.secondary.light }}
-              >
-                "Glöm mig" - A specialized service that helps individuals
-                exercise their right to be forgotten under GDPR. Streamlining
-                the process of identifying organizations and companies and
-                assist with data deletion requests.
-              </Typography>
+                  <Typography
+                    variant="h5"
+                    className="gradient-text"
+                    sx={{
+                      mb: 2,
+                      fontWeight: "bold",
+                      color: theme.palette.primary.contrastText,
+                    }}
+                  >
+                    Glommig.se
+                  </Typography>
+
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      color: "#a0a0a0",
+                      mb: 3,
+                      flexGrow: 1,
+                      lineHeight: 1.6,
+                    }}
+                  >
+                    "Glöm mig" - A specialized service that helps individuals
+                    exercise their right to be forgotten under GDPR.
+                    Streamlining the process of identifying organizations and
+                    companies and assist with data deletion requests.
+                  </Typography>
+
+                  <Button
+                    variant="outlined"
+                    endIcon={<LaunchIcon />}
+                    href="https://glommig.se"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    sx={{
+                      alignSelf: "flex-start",
+                      borderColor: "#cf8e00",
+                      color: "#cf8e00",
+                      "&:hover": {
+                        borderColor: "#ffb224",
+                        color: "#ffb224",
+                        backgroundColor: "rgba(207, 142, 0, 0.08)",
+                      },
+                    }}
+                  >
+                    Visit Website
+                  </Button>
+                </Box>
+              </Grid>
             </Grid>
 
             <Grid
@@ -187,24 +389,22 @@ function App() {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                marginTop: 4,
+
+                scrollMarginTop: "2rem",
               }}
+              id="skills"
             >
               <SkillComponent theme={theme} />
             </Grid>
           </Grid>
         </main>
+
         <footer
           style={{
-            marginTop: "3rem",
-            paddingBottom: "1.5rem",
             textAlign: "center",
           }}
         >
-          <Typography
-            variant="body2"
-            sx={{ color: theme.palette.secondary.light }}
-          >
+          <Typography variant="body2" sx={{ color: "#a0a0a0" }}>
             &copy; {new Date().getFullYear()} Small Bytes. All rights reserved.
           </Typography>
         </footer>
