@@ -16,7 +16,7 @@ const ImageComponent = ({ imageUrl }: ImageProps) => {
     >
       <img
         src={imageUrl}
-        alt="Profile"
+        alt="A Freelance Full Stack Engineer"
         style={{ width: "100%", height: "auto" }}
         loading="lazy"
       />
