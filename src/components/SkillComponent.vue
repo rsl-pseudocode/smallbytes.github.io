@@ -18,7 +18,7 @@
             borderRadius: '2px',
           }"
         />
-      </h4>
+      </h2>
     </v-col>
 
     <v-col cols="12">

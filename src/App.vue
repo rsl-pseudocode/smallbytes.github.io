@@ -1,7 +1,6 @@
 <template>
   <v-app>
     <v-container>
-      <!-- Header -->
       <header>
         <v-sheet
           class="header-box"
@@ -47,17 +46,14 @@
         </v-sheet>
       </header>
 
-      <!-- Main content -->
       <main>
         <v-row justify="center" class="pt-4" id="intro">
-          <!-- Profile Image -->
           <v-col cols="12" class="d-flex justify-center">
             <div class="profile-container mb-3 mt-3">
               <ImageComponent image-url="./IMG_profile.jpg" />
             </div>
           </v-col>
 
-          <!-- Introduction -->
           <v-col cols="12" class="text-center">
             <h1 class="gradient-text text-h2 text-sm-h1 mb-1 font-weight-bold">
               Hi, I'm Robert
@@ -68,7 +64,6 @@
             </h2>
           </v-col>
 
-          <!-- About section -->
           <v-col cols="12" sm="8" md="7" class="text-center">
             <v-sheet color="transparent" class="pa-1">
               <p
@@ -114,7 +109,6 @@
             </v-sheet>
           </v-col>
 
-          <!-- Projects section -->
           <v-col cols="12" class="mt-4" id="projects">
             <section aria-labelledby="products-heading">
               <h2
@@ -137,7 +131,6 @@
             </section>
           </v-col>
 
-          <!-- Product cards -->
           <v-col cols="12">
             <v-row class="mt-3 mb-4">
               <v-col cols="12" sm="6">
@@ -232,14 +225,12 @@
             </v-row>
           </v-col>
 
-          <!-- Skills section -->
           <v-col cols="12" class="d-flex justify-center" id="skills">
             <SkillComponent />
           </v-col>
         </v-row>
       </main>
 
-      <!-- Footer -->
       <footer class="text-center">
         <p class="text-body-2" :style="{ color: '#a0a0a0' }">
           © {{ currentYear }} Small Bytes. All rights reserved.
