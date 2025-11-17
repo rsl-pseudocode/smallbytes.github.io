@@ -185,6 +185,30 @@ const skillIcons: Skill[] = [
     description: 'JavaScript library for building dynamic user interfaces',
   },
   {
+    name: 'Vue',
+    icon: `
+      <svg
+        width="2.2em"
+        height="2.2em"
+        viewBox="0 0 256 221"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="xMidYMid"
+        class="skill-icon"
+      >
+        <path
+          d="M204.8 0H256L128 220.8 0 0h97.92L128 51.2 157.44 0h47.36Z"
+          fill="#cf8e00"
+        ></path>
+        <path
+          d="m0 0 128 220.8L256 0h-51.2L128 132.48 50.56 0H0Z"
+          fill="#cf8e00"
+          opacity="0.6"
+        ></path>
+      </svg>
+    `,
+    description: 'Progressive JavaScript framework for building modern web interfaces',
+  },
+  {
     name: 'Blazor',
     icon: `
       <svg
