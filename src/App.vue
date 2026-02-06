@@ -155,10 +155,9 @@
                       class="text-body-1 mb-6 flex-grow-1"
                       :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
                     >
-                      A platform for Swedish runners to find their next race and
-                      read about other runners' experiences. Features running
-                      events, race reviews, it aim's to be a community for
-                      running enthusiasts in Sweden.
+                      A community platform for Swedish runners I built and
+                      run. Handles race event aggregation, user reviews, and
+                      community features. Built with Remix/React Router 7.
                     </p>
 
                     <v-btn
@@ -200,10 +199,10 @@
                       class="text-body-1 mb-6 flex-grow-1"
                       :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
                     >
-                      "Glöm mig" - A specialized service that helps individuals
-                      exercise their right to be forgotten under GDPR.
-                      Streamlining the process of identifying organizations and
-                      companies and assist with data deletion requests.
+                      "Glöm mig" — A GDPR tool I built that lets users select
+                      companies from a curated directory and automatically
+                      generates and sends properly formatted erasure request
+                      emails. Built with Remix/React Router 7.
                     </p>
 
                     <v-btn
