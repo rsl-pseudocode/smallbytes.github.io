@@ -155,10 +155,9 @@
                       class="text-body-1 mb-6 flex-grow-1"
                       :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
                     >
-                      A community platform for Swedish runners. Find upcoming
-                      races, read and write race reviews, and connect with
-                      other running enthusiasts. Built with Remix/React
-                      Router 7.
+                      A community platform for Swedish runners I built and
+                      run. Handles race event aggregation, user reviews, and
+                      community features. Built with Remix/React Router 7.
                     </p>
 
                     <v-btn
@@ -200,10 +199,10 @@
                       class="text-body-1 mb-6 flex-grow-1"
                       :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
                     >
-                      "Glöm mig" — Select from a directory of companies and
-                      their contact details, then the app generates and sends
-                      a properly formatted GDPR erasure request email to each
-                      one on your behalf. Built with Remix/React Router 7.
+                      "Glöm mig" — A GDPR tool I built that lets users select
+                      companies from a curated directory and automatically
+                      generates and sends properly formatted erasure request
+                      emails. Built with Remix/React Router 7.
                     </p>
 
                     <v-btn
