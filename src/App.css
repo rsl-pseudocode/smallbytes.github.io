@@ -489,6 +489,40 @@ a {
   font-weight: 650;
 }
 
+@media (min-width: 961px) {
+  .hero-section {
+    padding-top: clamp(44px, 6vw, 84px);
+    padding-bottom: 42px;
+  }
+
+  .role-strip {
+    padding-bottom: 52px;
+  }
+
+  .content-band {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .products-band {
+    padding-top: 58px;
+    padding-bottom: 68px;
+  }
+
+  #collaboration {
+    padding-top: 68px;
+    padding-bottom: 82px;
+  }
+
+  .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .tech-list {
+    margin-top: 26px;
+  }
+}
+
 @media (max-width: 960px) {
   .site-header {
     grid-template-columns: 1fr;
