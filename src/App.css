@@ -317,7 +317,17 @@ a {
   padding: 18px;
   border: 2px solid #14161c;
   border-radius: 8px;
+  cursor: pointer;
   box-shadow: 8px 8px 0 rgba(20, 22, 28, 0.14);
+  transition: transform 0.18s ease, box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.product-badge:hover,
+.product-badge:focus-within {
+  transform: translateY(-5px);
+  border-color: #14161c;
+  box-shadow: 8px 14px 0 rgba(20, 22, 28, 0.14);
 }
 
 .product-badge::after {
@@ -356,6 +366,11 @@ a {
   background: #fcfaf4;
   color: #14161c;
   box-shadow: 8px 8px 0 #d99522;
+}
+
+.product-badge.actually-open:hover,
+.product-badge.actually-open:focus-within {
+  box-shadow: 8px 14px 0 #d99522;
 }
 
 .product-badge.actually-open .product-label,
@@ -520,6 +535,17 @@ a {
 
   .tech-list {
     margin-top: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-badge {
+    transition: none;
+  }
+
+  .product-badge:hover,
+  .product-badge:focus-within {
+    transform: none;
   }
 }
 
