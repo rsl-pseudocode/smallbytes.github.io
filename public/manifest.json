@@ -1,7 +1,7 @@
 {
   "name": "Small Bytes - Robert Sörman Lundgren Portfolio",
   "short_name": "Small Bytes",
-  "description": "Freelance full stack developer specializing in C#, .NET, Blazor, React, AWS, and Azure. Based in Sweden.",
+  "description": "Robert Sörman Lundgren is a product-minded freelance full stack engineer. Open to senior developer roles. Also interested in Technical Product Owner or Product Owner opportunities. Based in Sweden.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -48,7 +48,7 @@
       "src": "/IMG_profile.jpg",
       "sizes": "1200x1200",
       "type": "image/jpeg",
-      "label": "Robert Sörman Lundgren - Full Stack Developer"
+      "label": "Robert Sörman Lundgren - Full Stack Engineer"
     }
   ],
   "related_applications": [],
@@ -58,7 +58,7 @@
       "name": "Contact",
       "short_name": "Contact",
       "url": "mailto:hello@smallbytes.se",
-      "description": "Contact Robert for development services"
+      "description": "Contact Robert for full stack development and technical product consulting"
     },
     {
       "name": "LinkedIn",

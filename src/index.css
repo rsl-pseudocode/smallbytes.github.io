@@ -1,85 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Raleway:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;540;580;620;650;800;850;900&display=swap');
 
 :root {
-  background-color: #161616;
+  background-color: #f7f2e8;
+  color: #14161c;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --primary-color: #cf8e00;
-  --primary-light: #ffb224;
-  --text-color: #ffffff;
-  --secondary-text: #a0a0a0;
-  --animation-timing: 0.3s;
+  --page-bg: #f7f2e8;
+  --surface: #fffaf1;
+  --ink: #14161c;
+  --muted: rgba(20, 22, 28, 0.64);
+  --accent: #d99522;
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--text-color);
-  position: relative;
+  margin: 0;
   overflow-x: hidden;
-  background-color: #212121;
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  overflow-wrap: anywhere;
 }
 
-.slide-up {
-  animation: slideUp 0.5s ease-out;
-}
-
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+::selection {
+  background: #e7d718;
+  color: #14161c;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #212121;
+  background: #f7f2e8;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cf8e00;
-  border-radius: 4px;
+  background: #d99522;
+  border: 2px solid #f7f2e8;
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffb224;
+  background: #9b620d;
 }

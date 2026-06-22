@@ -1,293 +1,237 @@
 <template>
   <v-app>
-    <v-container>
-      <header>
-        <v-sheet
-          class="header-box"
-          :style="{
-            position: 'fixed',
-            top: 0,
-            right: 0,
-            zIndex: 10,
-            background: 'rgba(22, 22, 22, 0.7)',
-            backdropFilter: 'blur(1px)',
-            borderBottomLeftRadius: '12px',
-            padding: '8px 0',
-            boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
-          }"
-        >
-          <v-row justify="end" no-gutters>
-            <v-col cols="auto">
-              <v-btn
-                icon
-                variant="text"
-                href="https://www.linkedin.com/in/robert-sorman-lundgren/"
-                target="_blank"
-                color="#0077b5"
-                class="pulse"
-                aria-label="Connect with Robert on LinkedIn"
-              >
-                <v-icon>mdi-linkedin</v-icon>
-              </v-btn>
-            </v-col>
-            <v-col cols="auto">
-              <v-btn
-                icon
-                variant="text"
-                href="mailto:hello@smallbytes.se"
-                color="secondary"
-                class="pulse mr-2"
-                aria-label="Email Small Bytes"
-              >
-                <v-icon>mdi-email</v-icon>
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-sheet>
-      </header>
+    <header class="site-header">
+      <a class="brand" href="#intro" aria-label="Small Bytes home">
+        <span class="brand-mark" aria-hidden="true" />
+        <span>Small Bytes</span>
+      </a>
 
-      <main>
-        <v-row justify="center" class="pt-4" id="intro">
-          <v-col cols="12" class="d-flex justify-center">
-            <div class="profile-container mb-3 mt-3">
-              <ImageComponent image-url="./IMG_profile.jpg" />
-            </div>
-          </v-col>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#products">Products</a>
+        <a href="#collaboration">How I work</a>
+        <a href="mailto:hello@smallbytes.se">Contact</a>
+      </nav>
 
-          <v-col cols="12" class="text-center">
-            <h1 class="gradient-text text-h2 text-sm-h1 mb-1 font-weight-bold">
-              Hi, I'm Robert
-            </h1>
+    </header>
 
-            <h2 class="text-h5 text-sm-h4 white--text">
-              A freelance full stack engineer based in Sweden
-            </h2>
-          </v-col>
+    <main class="page-shell">
+      <section class="hero-section" id="intro" aria-labelledby="intro-heading">
+        <div class="hero-copy">
+          <p class="section-kicker">Product-minded full stack engineer based in Sweden</p>
+          <h1 id="intro-heading">
+            Senior engineer with a <span>product owner</span> brain.
+          </h1>
+          <p class="hero-lede">
+            With 11+ years as a developer, I still enjoy learning and building.
+            Over time, I have become just as interested in the product side:
+            understanding the problem, choosing what should ship first, and
+            learning from real users.
+          </p>
+          <p class="hero-support">
+            My background is in .NET, Blazor, Vue, React, and full stack
+            delivery. Running my own products has shaped how I think about
+            requirements, prioritization, UX, operations, and real user value.
+          </p>
 
-          <v-col cols="12" sm="8" md="7" class="text-center">
-            <v-sheet color="transparent" class="pa-1">
-              <p
-                class="text-body-1 mb-4"
-                :style="{ color: '#a0a0a0', fontSize: '1.05rem', lineHeight: 1.6 }"
-              >
-                With over 11 years as a developer I still truly enjoy learning
-                new things every day. I like to create effective, reliable and
-                efficient applications. <br />
-                I'm experienced in both front-end and back-end development, with
-                my main focus on technologies like .Net, Blazor and React.
-              </p>
+          <div class="hero-actions">
+            <a class="button-primary" href="mailto:hello@smallbytes.se">
+              <v-icon aria-hidden="true">mdi-email</v-icon>
+              <span>Contact me</span>
+            </a>
+            <a class="button-secondary" href="#products">
+              <span>View products</span>
+            </a>
+          </div>
+        </div>
 
-              <v-divider
-                class="my-4"
-                :style="{ backgroundColor: 'rgba(207, 142, 0, 0.3)' }"
-              />
+        <aside class="hero-portrait" aria-label="Robert profile summary">
+          <div class="portrait-card">
+            <img
+              src="/IMG_profile.jpg"
+              alt="Robert Sörman Lundgren - product-minded full stack engineer"
+              width="240"
+              height="276"
+            />
+          </div>
+          <div class="availability-card">
+            Open to senior developer roles. Interested in TPO/PO opportunities.
+          </div>
+        </aside>
+      </section>
 
-              <div class="d-flex justify-center mt-4">
-                <v-btn
-                  color="secondary"
-                  variant="flat"
-                  prepend-icon="mdi-email"
-                  href="mailto:hello@smallbytes.se"
-                  class="font-weight-bold"
-                  :style="{
-                    '&:hover': {
-                      backgroundColor: '#ffb224',
-                      color: '#ffffff',
-                    },
-                  }"
-                >
-                  Contact Me
-                </v-btn>
-              </div>
+      <section class="role-strip" aria-label="Role fit">
+        <article class="role-card">
+          <h2>Senior developer roles</h2>
+          <p>
+            My background is in .NET, Blazor, Vue, React, and full stack
+            delivery.
+          </p>
+        </article>
 
-              <p
-                class="text-body-2 mt-4 font-italic"
-                :style="{ color: '#a0a0a0' }"
-              >
-                Collaboration is key.
-              </p>
-            </v-sheet>
-          </v-col>
+        <article class="role-card product">
+          <h2>Technical Product Owner/Product Owner opportunities</h2>
+          <p>
+            Running my own products has shaped how I think about requirements,
+            prioritization, UX, operations, and real user value.
+          </p>
+        </article>
+      </section>
 
-          <v-col cols="12" class="mt-4" id="projects">
-            <section aria-labelledby="products-heading">
-              <h2
-                id="products-heading"
-                class="gradient-text text-h4 font-weight-bold text-center mb-1 pt-4 position-relative d-inline-block w-100"
-              >
-                My Products
-                <div
-                  :style="{
-                    position: 'absolute',
-                    height: '3px',
-                    width: '80px',
-                    background: 'linear-gradient(90deg, #cf8e00, transparent)',
-                    bottom: '-10px',
-                    left: 'calc(50% - 40px)',
-                    borderRadius: '2px',
-                  }"
-                />
-              </h2>
-            </section>
-          </v-col>
+      <section
+        class="content-band products-band"
+        id="products"
+        aria-labelledby="products-heading"
+      >
+        <div class="section-heading">
+          <h2 id="products-heading">Products I have taken from idea to production.</h2>
+          <p>
+            Three standalone products built to solve completely different
+            problems: running events, GDPR compliance, and broken opening hours.
+          </p>
+        </div>
 
-          <v-col cols="12">
-            <v-row class="mt-3 mb-4">
-              <v-col cols="12" sm="6" md="4">
-                <article
-                  class="pa-4 h-100 d-flex flex-column"
-                  itemscope
-                  itemtype="https://schema.org/SoftwareApplication"
-                >
-                  <v-sheet
-                    color="transparent"
-                    class="h-100 d-flex flex-column"
-                  >
-                    <h3
-                      itemprop="name"
-                      class="gradient-text text-h5 mb-4 font-weight-bold white--text"
-                    >
-                      Runivers.se
-                    </h3>
+        <div class="product-grid">
+          <article
+            class="product-badge runivers"
+            itemscope
+            itemtype="https://schema.org/SoftwareApplication"
+          >
+            <span class="product-label">Community platform</span>
+            <h3 itemprop="name">Runivers</h3>
+            <p itemprop="description">
+              A community platform for Swedish runners. I handle user feedback,
+              feature design, race data aggregation, reviews, and day-to-day
+              operation.
+            </p>
+            <a
+              class="stretched-product-link"
+              href="https://www.runiverse.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              itemprop="url"
+              aria-label="Visit Runivers website"
+            >
+              <span class="sr-only">Visit Runivers website</span>
+            </a>
+          </article>
 
-                    <p
-                      itemprop="description"
-                      class="text-body-1 mb-6 flex-grow-1"
-                      :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
-                    >
-                      A community platform for Swedish runners I built and
-                      run. Handles race event aggregation, user reviews, and
-                      community features. Built with Remix/React Router 7.
-                    </p>
+          <article
+            class="product-badge glom-mig"
+            itemscope
+            itemtype="https://schema.org/SoftwareApplication"
+          >
+            <span class="product-label">Legal UX</span>
+            <h3 itemprop="name">Glöm mig</h3>
+            <p itemprop="description">
+              A GDPR tool that turns complex legal requirements into a simple
+              user flow for generating and sending erasure requests.
+            </p>
+            <a
+              class="stretched-product-link"
+              href="https://glommig.se"
+              target="_blank"
+              rel="noopener noreferrer"
+              itemprop="url"
+              aria-label="Visit Glöm mig website"
+            >
+              <span class="sr-only">Visit Glöm mig website</span>
+            </a>
+          </article>
 
-                    <v-btn
-                      variant="outlined"
-                      color="secondary"
-                      append-icon="mdi-launch"
-                      href="https://www.runiverse.se"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="align-self-start"
-                      itemprop="url"
-                      aria-label="Visit Runivers.se website (opens in new tab)"
-                    >
-                      Visit Website
-                    </v-btn>
-                  </v-sheet>
-                </article>
-              </v-col>
+          <article
+            class="product-badge actually-open"
+            itemscope
+            itemtype="https://schema.org/SoftwareApplication"
+          >
+            <span class="product-label">Crowdsourced utility</span>
+            <h3 itemprop="name">Is It Actually Open</h3>
+            <p itemprop="description">
+              Google says yes, reality says no. UX and crowdsourcing logic for
+              checking whether shops, restaurants, and venues are actually open
+              when listed hours cannot be trusted.
+            </p>
+            <a
+              class="stretched-product-link"
+              href="https://isitactuallyopen.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              itemprop="url"
+              aria-label="Visit Is It Actually Open website"
+            >
+              <span class="sr-only">Visit Is It Actually Open website</span>
+            </a>
+          </article>
+        </div>
+      </section>
 
-              <v-col cols="12" sm="6" md="4">
-                <article
-                  class="pa-4 h-100 d-flex flex-column"
-                  itemscope
-                  itemtype="https://schema.org/SoftwareApplication"
-                >
-                  <v-sheet
-                    color="transparent"
-                    class="h-100 d-flex flex-column"
-                  >
-                    <h3
-                      itemprop="name"
-                      class="gradient-text text-h5 mb-4 font-weight-bold white--text"
-                    >
-                      Glommig.se
-                    </h3>
+      <section
+        class="content-band"
+        id="collaboration"
+        aria-labelledby="work-heading"
+      >
+        <div class="section-heading">
+          <h2 id="work-heading">How I work</h2>
+          <p>
+            The guardrails I use to ensure we build the right thing, the right
+            way, without wasting time.
+          </p>
+        </div>
 
-                    <p
-                      itemprop="description"
-                      class="text-body-1 mb-6 flex-grow-1"
-                      :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
-                    >
-                      "Glöm mig" — A GDPR tool I built that lets users select
-                      companies from a curated directory and automatically
-                      generates and sends properly formatted erasure request
-                      emails. Built with Remix/React Router 7.
-                    </p>
+        <div class="work-grid">
+          <article class="work-card">
+            <h3>Start with the problem</h3>
+            <p>
+              Understand the user need, business goal, and constraints before
+              choosing the technical path.
+            </p>
+          </article>
 
-                    <v-btn
-                      variant="outlined"
-                      color="secondary"
-                      append-icon="mdi-launch"
-                      href="https://glommig.se"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="align-self-start"
-                      itemprop="url"
-                      aria-label="Visit Glommig.se website (opens in new tab)"
-                    >
-                      Visit Website
-                    </v-btn>
-                  </v-sheet>
-                </article>
-              </v-col>
+          <article class="work-card">
+            <h3>Ship the smallest useful version</h3>
+            <p>
+              Keep scope clear, get core value into users' hands early, then
+              iterate from feedback.
+            </p>
+          </article>
 
-              <v-col cols="12" sm="6" md="4">
-                <article
-                  class="pa-4 h-100 d-flex flex-column"
-                  itemscope
-                  itemtype="https://schema.org/SoftwareApplication"
-                >
-                  <v-sheet
-                    color="transparent"
-                    class="h-100 d-flex flex-column"
-                  >
-                    <h3
-                      itemprop="name"
-                      class="gradient-text text-h5 mb-4 font-weight-bold white--text"
-                    >
-                      IsItActuallyOpen.com
-                    </h3>
+          <article class="work-card">
+            <h3>Bridge product, business and code</h3>
+            <p>
+              Discuss outcomes with stakeholders, turn needs into requirements,
+              and keep priorities grounded with developers.
+            </p>
+          </article>
 
-                    <p
-                      itemprop="description"
-                      class="text-body-1 mb-6 flex-grow-1"
-                      :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
-                    >
-                      Google says yes, reality says no. IsItActuallyOpen.com
-                      helps people check whether shops, restaurants and venues
-                      are actually open, using fresh local reports when listed
-                      opening hours cannot be trusted.
-                    </p>
+          <article class="work-card">
+            <h3>Own the full lifecycle</h3>
+            <p>
+              Keep architecture, UX, requirements, prioritization, deployment,
+              and maintenance connected.
+            </p>
+          </article>
+        </div>
 
-                    <v-btn
-                      variant="outlined"
-                      color="secondary"
-                      append-icon="mdi-launch"
-                      href="https://isitactuallyopen.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="align-self-start"
-                      itemprop="url"
-                      aria-label="Visit Is It Actually Open website (opens in new tab)"
-                    >
-                      Visit Website
-                    </v-btn>
-                  </v-sheet>
-                </article>
-              </v-col>
-            </v-row>
-          </v-col>
+        <ul class="tech-list" aria-label="Technical skills">
+          <li>C#</li>
+          <li>.NET</li>
+          <li>Blazor</li>
+          <li>Vue</li>
+          <li>React</li>
+          <li>AWS</li>
+          <li>Azure</li>
+        </ul>
+      </section>
+    </main>
 
-          <v-col cols="12" class="d-flex justify-center" id="skills">
-            <SkillComponent />
-          </v-col>
-        </v-row>
-      </main>
-
-      <footer class="text-center">
-        <p class="text-body-2" :style="{ color: '#a0a0a0' }">
-          © {{ currentYear }} Small Bytes. All rights reserved.
-        </p>
-      </footer>
-    </v-container>
+    <footer class="site-footer">
+      <strong>Small Bytes</strong>
+      <span>© {{ currentYear }} · hello@smallbytes.se</span>
+    </footer>
   </v-app>
 </template>
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import ImageComponent from './components/ImageComponent.vue'
-import SkillComponent from './components/SkillComponent.vue'
 
 const currentYear = computed(() => new Date().getFullYear())
 </script>

@@ -83,7 +83,7 @@ Use bold product badges/cards, not quiet text-only articles. Each product should
 
 - Runivers: community/race data product, user feedback, feature design, race data aggregation, reviews, day-to-day operation.
 - Glöm mig: GDPR erasure request flow, legal complexity translated into simple UX.
-- Is It Actually Open: crowdsourced utility for checking real opening status when listed hours cannot be trusted.
+- Is It Actually Open: crowdsourced utility for checking real opening status when listed hours cannot be trusted. Include the line "Google says yes, reality says no." as a memorable product hook.
 
 Cards should feel distinct through color and label, while still fitting a coherent visual system.
 
