@@ -133,7 +133,7 @@
 
           <v-col cols="12">
             <v-row class="mt-3 mb-4">
-              <v-col cols="12" sm="6">
+              <v-col cols="12" sm="6" md="4">
                 <article
                   class="pa-4 h-100 d-flex flex-column"
                   itemscope
@@ -177,7 +177,7 @@
                 </article>
               </v-col>
 
-              <v-col cols="12" sm="6">
+              <v-col cols="12" sm="6" md="4">
                 <article
                   class="pa-4 h-100 d-flex flex-column"
                   itemscope
@@ -215,6 +215,51 @@
                       class="align-self-start"
                       itemprop="url"
                       aria-label="Visit Glommig.se website (opens in new tab)"
+                    >
+                      Visit Website
+                    </v-btn>
+                  </v-sheet>
+                </article>
+              </v-col>
+
+              <v-col cols="12" sm="6" md="4">
+                <article
+                  class="pa-4 h-100 d-flex flex-column"
+                  itemscope
+                  itemtype="https://schema.org/SoftwareApplication"
+                >
+                  <v-sheet
+                    color="transparent"
+                    class="h-100 d-flex flex-column"
+                  >
+                    <h3
+                      itemprop="name"
+                      class="gradient-text text-h5 mb-4 font-weight-bold white--text"
+                    >
+                      IsItActuallyOpen.com
+                    </h3>
+
+                    <p
+                      itemprop="description"
+                      class="text-body-1 mb-6 flex-grow-1"
+                      :style="{ color: '#a0a0a0', lineHeight: 1.6 }"
+                    >
+                      Google says yes, reality says no. IsItActuallyOpen.com
+                      helps people check whether shops, restaurants and venues
+                      are actually open, using fresh local reports when listed
+                      opening hours cannot be trusted.
+                    </p>
+
+                    <v-btn
+                      variant="outlined"
+                      color="secondary"
+                      append-icon="mdi-launch"
+                      href="https://isitactuallyopen.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="align-self-start"
+                      itemprop="url"
+                      aria-label="Visit Is It Actually Open website (opens in new tab)"
                     >
                       Visit Website
                     </v-btn>
