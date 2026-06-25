@@ -1,7 +1,7 @@
 {
   "name": "Small Bytes - Robert Sörman Lundgren Portfolio",
   "short_name": "Small Bytes",
-  "description": "Robert Sörman Lundgren is a product-minded freelance full stack engineer. Open to senior developer roles. Also interested in Technical Product Owner or Product Owner opportunities. Based in Sweden.",
+  "description": "Robert Sörman Lundgren is a senior full stack engineer in Sweden. Open to developer roles with hands-on solution architecture, system design, and production delivery.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait-primary",
@@ -58,7 +58,7 @@
       "name": "Contact",
       "short_name": "Contact",
       "url": "mailto:hello@smallbytes.se",
-      "description": "Contact Robert for full stack development and technical product consulting"
+      "description": "Contact Robert for full stack development and solution design"
     },
     {
       "name": "LinkedIn",

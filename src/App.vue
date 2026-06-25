@@ -17,15 +17,16 @@
     <main class="page-shell">
       <section class="hero-section" id="intro" aria-labelledby="intro-heading">
         <div class="hero-copy">
-          <p class="section-kicker">Product-minded full stack engineer based in Sweden</p>
+          <p class="section-kicker">Senior Full Stack Engineer based in Sweden</p>
           <h1 id="intro-heading">
-            Senior engineer with a <span>product owner</span> brain.
+            Turning business needs into
+            <span>systems teams can build and run</span>.
           </h1>
           <p class="hero-lede">
-            With 11+ years as a developer, I still enjoy learning and building.
-            Over time, I have become just as interested in the product side:
-            understanding the problem, choosing what should ship first, and
-            learning from real users.
+            With 11+ years as a developer, I work best in the space between
+            business needs, system design, and production delivery:
+            understanding the problem, shaping a practical architecture, and
+            helping teams build it.
           </p>
           <p class="hero-support">
             My background is in .NET, Blazor, Vue, React, and full stack
@@ -48,13 +49,13 @@
           <div class="portrait-card">
             <img
               src="/IMG_profile.jpg"
-              alt="Robert Sörman Lundgren - product-minded full stack engineer"
+              alt="Robert Sörman Lundgren - senior full stack engineer"
               width="240"
               height="276"
             />
           </div>
           <div class="availability-card">
-            Open to senior developer roles. Interested in TPO/PO opportunities.
+            Senior developer roles with hands-on solution design.
           </div>
         </aside>
       </section>
@@ -69,10 +70,11 @@
         </article>
 
         <article class="role-card product">
-          <h2>Technical Product Owner/Product Owner opportunities</h2>
+          <h2>Hands-on Solution Architect / Lösningsarkitekt</h2>
           <p>
-            Running my own products has shaped how I think about requirements,
-            prioritization, UX, operations, and real user value.
+            Focusing on roles that combine stakeholder understanding, practical
+            system design, and implementation support rather than slide-only
+            architecture.
           </p>
         </article>
       </section>
@@ -195,10 +197,11 @@
           </article>
 
           <article class="work-card">
-            <h3>Bridge product, business and code</h3>
+            <h3>Bridge business and code</h3>
             <p>
-              Discuss outcomes with stakeholders, turn needs into requirements,
-              and keep priorities grounded with developers.
+              Listen to stakeholders, identify the actual problem, and
+              translate those needs into a solid technical design developers
+              can work with.
             </p>
           </article>
 
